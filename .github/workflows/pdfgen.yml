@@ -28,7 +28,7 @@ jobs:
       # 1. 取代舊版 checkout
       - uses: actions/checkout@v4   # 官方建議使用 latest v4 tag
         with:
-            ref: workflow
+            ref: actiongood
 
       # 0️⃣  (optional) cache Node stuff exactly once
       - uses: actions/setup-node@v4

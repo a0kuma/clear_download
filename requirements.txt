@@ -1,0 +1,7 @@
+numpy
+matplotlib
+beautifulsoup4
+requests
+Pillow
+wget
+reportlab

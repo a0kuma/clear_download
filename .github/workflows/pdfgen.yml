@@ -25,6 +25,14 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
+      # 0. Checkout current branch first to get requirements.txt
+      - uses: actions/checkout@v4
+
+      # Install python packages from requirements.txt (includes reportlab)
+      - name: Install python packages
+        run: |
+          pip install -r requirements.txt
+
       # 1. 取代舊版 checkout
       - uses: actions/checkout@v4   # 官方建議使用 latest v4 tag
         with:
@@ -43,12 +51,6 @@ jobs:
       #   run: |
       #     npm i puppeteer@24.11.2
       #     npm i a4pic2pdf@2.3.2
-
-
-      - name: Install python packages
-        run: |
-          # Install Jekyll and build the site
-          pip install -r requirements.txt reportlab
 
       
       # 2. main logic
